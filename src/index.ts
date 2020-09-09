@@ -12,6 +12,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('home')
+  res.end()
+})
 app.use('/articles', articleRouter)
 app.use('/test', testRouter)
 
