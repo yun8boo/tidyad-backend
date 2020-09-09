@@ -8,7 +8,8 @@
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
-    "start": "ts-node src/index.ts"
+    "start": "yarn build && node dist/index.js",
+    "ts-node-start": "ts-node src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
